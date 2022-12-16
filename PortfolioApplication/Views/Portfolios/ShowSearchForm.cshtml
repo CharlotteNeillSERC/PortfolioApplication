@@ -1,0 +1,28 @@
+﻿<h1 class="text-center">Search</h1>
+<hr />
+
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header">
+                <h5>Search for Project</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="ShowSearchResults">
+                    <div class="mb-3">
+                        <label for="SearchPhrase" class="control-label mb-3">Enter name of project:</label>
+                        <input name="SearchPhrase" class="form-control" />
+                    </div>
+                    <div class="mb-3 col text-center">
+                        <input type="submit" value="Search" class="btn stylebutton" />
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div>
+                    <a asp-action="Index">Back to all projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

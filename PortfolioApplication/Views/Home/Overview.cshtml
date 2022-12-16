@@ -1,0 +1,76 @@
+﻿@*
+
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div>
+    <div class="row mb-3 text-center">
+    <h1>Projects</h1>
+    </div>
+    <div class="row mb-3 text-center">
+    <h4>Here's an example of some of my work:</h4>
+    </div>
+    <div class="row mb-5">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+        <img style="width:100%" src="~/images/carmaintenanceexample.jpg" />
+    </div>
+
+    <div class="item">
+        <img style="width:100%" src="~/images/birchesappexample.jpg" />
+    </div>
+    
+    <div class="item">
+      <img  style="width:100%" src="~/images/propertysystemexample.jpg" />
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only"></span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only "></span>
+  </a>
+</div>
+    </div>
+
+
+    <div class="row justify-content-between">
+        
+    <div class="col-6">
+        <h4>Car Maintenance System</h4>
+        <p>
+            This application was built using Windows Forms and SQL Server Management Studio.
+            I used C# and SQL to create a database where users could enter their car problems and employees could search the database.
+        </p>
+        <h4>Birches Restaurant Mobile App</h4>
+        <p>
+            This was a mobile application built for Birches restaurant, SERC in Android Studio. I used JavaScript to create and interactive app
+            where a user can book a table.
+        </p>
+        <h4>Property Management Console App</h4>
+        <p>I created this console application for estate agents to view/search/add to/edit/delete their rental or sales properties.</p>
+    </div>
+
+        <div class="col-6 align-self-center">
+            <a asp-area="" asp-controller="Portfolios" asp-action="Index"><h1 style="margin-left: 50px;">Look at my other projects here!</h1></a>
+    </div>
+    </div>
+</div>

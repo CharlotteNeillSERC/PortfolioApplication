@@ -1,0 +1,55 @@
+﻿@model PortfolioApplication.Models.ContactInfo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="row justify-content-between">
+    <div class="col-4 align-self-center">
+        <img src="~/images/contactme.png" />
+    </div>
+
+    <div class="col-7 mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h5>Contact</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group mb-3">
+                        <label asp-for="contactName" class="control-label">Full Name:</label>
+                        <input asp-for="contactName" class="form-control" />
+                        <span asp-validation-for="contactName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="contactEmail" class="control-label">Email:</label>
+                        <input asp-for="contactEmail" class="form-control" />
+                        <span asp-validation-for="contactEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="contactSubject" class="control-label">Subject:</label>
+                        <input asp-for="contactSubject" class="form-control" />
+                        <span asp-validation-for="contactSubject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="contactMessage" class="control-label">Message:</label>
+                        <textarea rows="5" asp-for="contactMessage" class="form-control" ></textarea>
+                        <span asp-validation-for="contactMessage" class="text-danger"></span>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" value="Send" class="btn btn-primary stylebutton" />
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,49 @@
+﻿@model PortfolioApplication.Models.Portfolio
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>@Html.DisplayFor(model => model.ProjectName)</h4>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-8">
+                <div class="card">
+            <div class="card-header">
+                <h5>Edit Project</h5>
+            </div>
+            <div class="card-body">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+                    <div class="mb-3">
+                        <label asp-for="ProjectName" class="control-label  mb-3">Project Name:</label>
+                        <input asp-for="ProjectName" class="form-control" />
+                <span asp-validation-for="ProjectName" class="text-danger"></span>
+            </div>
+                    <div class="mb-3">
+                        <label asp-for="ProjectDescription" class="control-label  mb-3">Project Description:</label>
+                        <textarea rows="4"  asp-for="ProjectDescription" class="form-control"></textarea>
+                <span asp-validation-for="ProjectDescription" class="text-danger"></span>
+            </div>
+                            <div class="mb-3 col text-center">
+                        <input type="submit" value="Save" class="btn stylebutton" />
+            </div>
+        </form>
+        </div>
+            <div class="card-footer">
+                <div>
+                    <a asp-action="Index">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

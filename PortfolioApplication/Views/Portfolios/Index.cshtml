@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PortfolioApplication.Models.Portfolio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row justify-content-between">
+    <div class="col-10">
+<h1>Portfolio</h1>
+</div>
+    <div class="col-1">
+        <button class="btn searchbutton"><a asp-action="ShowSearchForm" class="text-light"><img class="magnifying" src="~/images/search.png" /></a></button>
+    </div>
+    <div class="col-1">
+        <button class="btn addbutton"><a asp-action="Create" class="text-light"><img class="plus" src="~/images/plus.png" /></a></button>
+    </div>
+</div>
+
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>
+                Project Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName) 
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
